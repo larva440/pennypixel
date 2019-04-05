@@ -1,0 +1,139 @@
+<en-GB>
+Very first experimental version of Penny Pixel's Secret Quest
+
+Unique steering touch system:
+
+"if you jump too late you may die."
+
+if you expressed your intention too late - it is your fault. You die and it completely fine and fair.
+
+If we are using keyboard or keypad, we just press the button.
+In mobile devices, there are physical buttons. 
+
+Basically there are two common solutions for steering:
+
+Gestures - ie. by dragging our finger up. or by double click.
+pros: you do not worry about where to click, but how.
+cons: introduces latency - may cost you life.
+
+Virtual buttons. 
+pros: no latency
+cons: because you can not feel physical button under your finger you are likely to miss virtual area to touch - may cost you life.
+
+Virtual Joistick.
+pros: you have yoystick
+cons: requires to keep your finger touch
+ 
+
+Trying to solve it i came up with this solution:
+
+divide screen on half vertically, so we have two large virtual buttons that 
+are always under our fingers.
+
+1. left touch
+2. right touch
+
+how to jump?
+if you are moving left so you are touching left side, to jump left immediately just touch right side.
+if you are moving right (so you are touching right side), to jump left immediately just touch right side.
+
+drawbacks:
+doubleclick becomes left double click, and right double click.
+doubleclick is not an atomic signal, it involves 
+
+TouchBegin1, <time1>, TouchEnd1, <time2>, TouchBegin2, <time3> TouchEnd2
+
+If we assume, that action is invoked as soon as we receive TouchBegin2
+the latency equals L=time1+time2
+
+so time1 and time2 is a minimal time required to express will of particular action.
+Latency is not just a waste of time, it my cost you life.
+
+another approch is up gesture. 
+TouchBebin, <time1>, moveup:time2, 
+
+if player is moving so is already touched, we need to detect movement of the finger,
+probabely we want to ignore micromovement to avoid false accidental signals,
+so it introduces latency, because movement must be significant,
+it forces player to move finger rapidly, furthermore engages whole wrist movement
+if pointer firger used.
+
+because it is complex move, repeatable signals are limited compared to simple signals.
+(Imagine that you are playing arcade game machine and you have to shot enemies,
+so you press fire repetabely, the faster than better)
+
+Jumping usually are not repeated so fast, but timing is very important.
+So drawback is possible latency.
+
+
+
+
+dwa kciuki jednoczesnie - skok w gora
+
+w prawo i skok maksymalny w prawo to gest w górę.
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+double click with hold
+just double click
+
+
+
+additionally both touch
+
+ 
+
+ with is atomic,
+
+
+so it must involve minimal move left or right, with may be relevant.
+
+
+
+how to jump still?
+well, it is not possible...
+nobody perfect
+
+
+
+Steerring:
+
+
+touch left side of your screen to move left.
+touch right side of your screen to move right.
+
+when you are moving left, and want to jump left do it by touching right side (at the beginning you may find it not intuitive, but this allows you to jump instantly in the moment of your choice
+to jump when you are moving right - touch left side.
+
+
+
+if you are not moving and you can simply jump try double touch (left or right)
+
+if you want to jump highr keep touch 
+
+
+touch right side of your screen to move right.
+
+
+Source codes and developer's diary can be found here: https://github.com/pgasienica/pennypixel
+</en-GB>
+

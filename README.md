@@ -55,7 +55,11 @@ Definitely it was one of my most exciting coding trip.
 
 ## LICENCE
 ```
-I do not care.
-I perceive it as a lost&found code scripts, honestly - i'm not sure if any line was produced in my mind or i just remembered it,
-i hope you could do with it whatever you want including claiming that you are the only original autor.
+Do what you want.
 ```
+
+* you can watch very first gameplay at YT https://www.youtube.com/watch?v=44TcIlIBJoU (b38333c)
+* but if you want to see how it ends, you have to play: https://play.google.com/store/apps/details?id=com.larva440.pennypixel
+* if you find this app useless, i insist to rate it with ONE STAR ONLY at play store, optionally you can leave some greetings in comment.
+* in case of any bug, feel free to fix, or you can contact me directly to have this bug fixed immediately.
+
